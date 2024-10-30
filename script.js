@@ -11,7 +11,7 @@ document.getElementById('gradeForm').addEventListener('submit', function(event) 
         return;
     }
 
-    if (grade >= 6) {
+    if (grade >= 60) {
         result.textContent = 'Aprovado!';
         result.style.color = '#ff9800'; /* laranja */
     } else {

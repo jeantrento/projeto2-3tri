@@ -2,20 +2,24 @@
 document.getElementById('gradeForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    const grade = parseFloat(document.getElementById('grade').value);
+    const grade1 = parseFloat(document.getElementById('grade1').value);
+    const grade2 = parseFloat(document.getElementById('grade2').value);
+    const grade3 = parseFloat(document.getElementById('grade3').value);
     const result = document.getElementById('result');
-    
-    if (isNaN(grade)) {
-        result.textContent = 'Insira uma média válida!';
+
+    if (isNaN(grade1) || isNaN(grade2) || isNaN(grade3)) {
+        result.textContent = 'Por favor, insira todas as notas corretamente.';
         result.style.color = 'red';
         return;
     }
 
-    if (grade >= 6) {
-        result.textContent = 'Aprovado!';
-        result.style.color = '#ff9800'; /* laranja */
+    const average = (grade1 + grade2 + grade3) / 3;
+
+    if (average >= 6) {
+        result.textContent = `Aprovado! Média: ${average.toFixed(1)}`;
+        result.style.color = '#333333';
     } else {
-        result.textContent = 'Reprovado!';
+        result.textContent = `Reprovado. Média: ${average.toFixed(1)}`;
         result.style.color = 'red';
     }
 });

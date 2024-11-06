@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação de Aprovação</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-amigo.css">
 </head>
 <body>
     <div class="container">
-        <h1>Está Aprovado?</h1>
+        <h1>Verificação de Aprovação</h1>
         <form id="gradeForm">
-            <label for="grade">Média:</label>
-            <input type="number" id="grade" placeholder="Ex: 7.5" required>
-            <button type="submit">Verificar</button>
+            <label for="grade1">Nota 1ª Unidade:</label>
+            <input type="number" id="grade1" placeholder="Digite a nota" required>
+            
+            <label for="grade2">Nota 2ª Unidade:</label>
+            <input type="number" id="grade2" placeholder="Digite a nota" required>
+            
+            <label for="grade3">Nota 3ª Unidade:</label>
+            <input type="number" id="grade3" placeholder="Digite a nota" required>
+            
+            <button type="submit">Calcular Média</button>
         </form>
+        
         <p id="result"></p>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,7 @@
 /* styles.css */
+body {
+    background-color: yellow;
+}
 * {
     margin: 0;
     padding: 0;
